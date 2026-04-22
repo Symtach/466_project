@@ -25,16 +25,16 @@ An e-commerce web app for ordering the world's finest meatballs, with customer c
 ## Relational Schema
 
 ```
-Employee  ( EmpID, Name, Password )
-Customer  ( UserID, Name, Email, Password )
-Product   ( ProductID, Name, Price, Stock )
-Orders    ( OrderID, UserID†, EmpID†, ShippingAddr, BillingInfo, Status )
-OrderItem ( OrderID†, ProductID†, Quantity )
-Cart      ( CartID, UserID† )
-CartItem  ( CartID†, ProductID†, Quantity )
+Employee  ( *EmpID, Name, Password )
+Customer  ( *UserID, Name, Email, Password )
+Product   ( *ProductID, Name, Price, Stock )
+Orders    ( *OrderID, UserID†, EmpID†, ShippingAddr, BillingInfo, Status )
+OrderItem ( *OrderID†, *ProductID†, Quantity )
+Cart      ( *CartID, UserID† )
+CartItem  ( *CartID†, *ProductID†, Quantity )
 ```
 
-> **Key:** underline = primary key &nbsp;·&nbsp; `†` = foreign key
+> **Key:** * = primary key &nbsp;·&nbsp; `†` = foreign key
 
 ---
 
