@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,12 +14,15 @@
       </div>
       <nav>
         <ul>
-          <li><a href="home.html"><b>Home</b></a></li>
-          <li><a href="login.html"><b>Login</b></a></li>
+          <li><a href="home.php"><b>Home</b></a></li>
+          <li><a href="login.php"><b>Login</b></a></li>
           <li><a href="cart.html"><b>Cart</b></a></li>
           <li><a href="order.html"><b>Orders</b></a></li>
         </ul>
       </nav>
+      <?php if (!empty($_SESSION['user_email'])): ?>
+        <div class="user-info"><?= htmlspecialchars($_SESSION['user_email']) ?></div>
+      <?php endif; ?>
     </header>
     <main>
       <div class="catalogue">
