@@ -3,9 +3,9 @@
 // Used In All Other .php Files
 // Through: require 'db_connect.php';
 $host = "courses";
-$db = "z1998298";
-$user = "z1998298"; // MariaDB
-$pass = "2004Apr21"; // MariaDB
+$db = "z1234567";
+$user = "z1234567"; // MariaDB
+$pass = "YYYYMmmDD"; // MariaDB
 
 try{
 	$pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
