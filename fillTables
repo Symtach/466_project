@@ -156,7 +156,7 @@ VALUES
 INSERT INTO Orders
 (UserID, Status, ShippingAddr, BillingInfo)
 VALUES
-('1', 'Shipped','Forests of Strahl','0000000000000001');
+('5', 'Shipped','Forests of Strahl','0000000000000001');
 
 INSERT INTO OrderItem
 (OrderID, ProductID, Quantity)
