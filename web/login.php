@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <?php endif; ?>
       <form action="login.php" method="post">
         <div class="imgcontainer">
-          <img src="../meatballs/meatball1.png" alt="Avatar" class="avatar">
+          <img src="../meatballs/meatball1.png" alt="Spinning Meatball" class="spinning">
         </div>
         <div class="container">
           <label for="emaii"><b>Email</b></label>
@@ -65,9 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <input type="password" placeholder="Enter Password" name="psw" required>
 
           <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
         </div>
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" class="cancelbtn" onclick="window.location.href='home.php'">Cancel</button>

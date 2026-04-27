@@ -10,6 +10,7 @@ if(isset($_POST['remove'])){
         ->execute([$_POST['cart_id'], $_POST['product_id']]);
 }
 ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -33,6 +34,9 @@ if(isset($_POST['remove'])){
           <li><a href="order.php"><b>Orders</b></a></li>
         </ul>
       </nav>
+      <?php if (!empty($_SESSION['user_email'])): ?>
+        <div class="user-info"><?= htmlspecialchars($_SESSION['user_email']) ?></div>
+      <?php endif; ?>
     </header>
 
     <main>

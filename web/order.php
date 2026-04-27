@@ -4,6 +4,7 @@ require '../db_connect.php';
 // TEMPORARY: assume user is 1
 $userID = 1;
 ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -27,6 +28,9 @@ $userID = 1;
           <li><a href="order.php"><b>Orders</b></a></li>
         </ul>
       </nav>
+      <?php if (!empty($_SESSION['user_email'])): ?>
+        <div class="user-info"><?= htmlspecialchars($_SESSION['user_email']) ?></div>
+      <?php endif; ?>
     </header>
 
     <main>
